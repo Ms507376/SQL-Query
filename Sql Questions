@@ -1,0 +1,52 @@
+----------------------Table – EmployeeDetails------------------------------------------------------------
+
+EmpId	FullName	  ManagerId	DateOfJoining	 City
+121	  John Snow	    321	   01/31/2014    	Toronto
+321	  Walter White	986  	 01/30/2015	    California
+421 	Kuldeep Rana	876	   27/11/2016	    New Delhi
+
+
+-------------------Table – EmployeeSalary------------------------------------------------------------------
+EmpId	Project	Salary	  Variable
+121	    P1	  8000	    500
+321	    P2	  10000	    1000
+421	    P1	  12000	     0
+
+
+----------------------------------Questions------------------------------------------------------------------
+1) Write a SQL query to fetch all the Employees who are also managers from EmployeeDetails table.
+   
+SELECT DISTINCT E.FullName
+FROM EmployeeDetails E
+INNER JOIN EmployeeDetails M
+ON E.EmpID = M.ManagerID;
+
+o/p---> Walter White
+
+2)Write a SQL query to fetch duplicate records from a EmployeeDetails (leaving the primary key – EmpId).
+
+SELECT FullName, ManagerId, DateOfJoining, City, COUNT(*)
+FROM EmployeeDetails
+GROUP BY FullName, ManagerId, DateOfJoining, City
+HAVING COUNT(*) > 1;
+
+o/p-Null(No duplicate record)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
