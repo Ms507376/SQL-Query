@@ -44,10 +44,13 @@ WHERE MOD (EmpId, 2) = 0;
 4)Write a SQL query to create a new table with data and structure copied from another table.
    
    create table newtable AS select * from EmployeeDetails;
+   SELECT * INTO newtable FROM EmployeeDetails;
+   
 
 5)Write a SQL query to create an empty table with the same structure as some other table.
    
    create table newtable1 AS select * from EmployeeDetails where 1=0;
+   SELECT * INTO newtable FROM EmployeeDetails WHERE 1 = 0;
    
 6) Write a SQL query to fetch top 2 records?
    
@@ -65,7 +68,20 @@ WHERE MOD (EmpId, 2) = 0;
 
   SELECT DISTINCT(Salary) FROM EmployeeSalary ORDER BY Salary DESC LIMIT 2,1;
   NOTE: SELECT DISTINCT(Salary) FROM EmployeeSalary ORDER BY Salary DESC LIMIT N-1,1;(for Nth Highest salary)
-
+  
+9) Write an SQL query to fetch unique values of DEPARTMENT from Worker table.
+    Select distinct DEPARTMENT from Worker;
+    
+10)Write an SQL query to print details of the Workers whose SALARY lies between 100000 and 500000.
+     Select * from Worker where SALARY between 100000 and 500000;
+     
+11)write an SQL query to print details of the Workers who have joined in Feb’2014.
+     Select * from Worker where year(JOINING_DATE) = 2014 and month(JOINING_DATE) = 2;
+    
+12)  
+     
+     
+    
 
 
 
