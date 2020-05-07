@@ -32,6 +32,62 @@ HAVING COUNT(*) > 1;
 
 o/p-Null(No duplicate record)
 
+3)Write a SQL query to fetch only odd rows and only even row from the table.
+ --------odd row--------------
+SELECT * FROM EmployeeDetails 
+WHERE MOD (EmpId, 2) <> 0;
+
+-----------Even row-----------
+SELECT * FROM EmployeeDetails 
+WHERE MOD (EmpId, 2) = 0;
+
+4)Write a SQL query to create a new table with data and structure copied from another table.
+   
+   create table newtable AS select * from EmployeeDetails;
+
+5)Write a SQL query to create an empty table with the same structure as some other table.
+   
+   create table newtable1 AS select * from EmployeeDetails where 1=0;
+   
+6) Write a SQL query to fetch top 2 records?
+   
+   SELECT * FROM EmployeeSalary ORDER BY Salary DESC LIMIT 2;
+   
+7) Write a SQL query to fetch MAX/MIN/AVG salary from table?
+    
+    SELECT MAX(Salary) AS sal from EmployeeSalary;
+
+    SELECT MIN(Salary) AS sal from EmployeeSalary;
+
+    SELECT AVG(Salary) AS sal from EmployeeSalary;
+    
+8)Write a SQL query to fetch 3rd highest salary from  EmployeeSalary table?
+
+  SELECT DISTINCT(Salary) FROM EmployeeSalary ORDER BY Salary DESC LIMIT 2,1;
+  NOTE: SELECT DISTINCT(Salary) FROM EmployeeSalary ORDER BY Salary DESC LIMIT N-1,1;(for Nth Highest salary)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
