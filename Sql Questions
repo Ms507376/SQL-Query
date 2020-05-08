@@ -78,7 +78,15 @@ WHERE MOD (EmpId, 2) = 0;
 11)write an SQL query to print details of the Workers who have joined in Feb’2014.
      Select * from Worker where year(JOINING_DATE) = 2014 and month(JOINING_DATE) = 2;
     
-12)  
+12)write sql query to get current date.
+    SELECT SYSDATE();
+    SELECT GETDATE();
+    SELECT CURDATE();
+    
+13)To get sql developer version
+     SELECT @@VERSION
+     
+14)
      
      
     
