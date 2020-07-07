@@ -110,7 +110,59 @@ WHERE MOD (EmpId, 2) = 0;
        SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
        WHERE CustomerID = 1;
   
-  16)
+  16) Different LIKE operators with '%' and '_' wildcards:
+       WHERE CustomerName LIKE 'a%'	          Finds any values that starts with "a"
+       WHERE CustomerName LIKE '%a'	          Finds any values that ends with "a"
+       WHERE CustomerName LIKE '%or%'        	Finds any values that have "or" in any position
+       WHERE CustomerName LIKE '_r%'	         Finds any values that have "r" in the second position
+       WHERE CustomerName LIKE 'a_%_%'	       Finds any values that starts with "a" and are at least 3 characters in length
+       WHERE ContactName LIKE 'a%o'	          Finds any values that starts with "a" and ends with "o"
+       
+       
+       %	 Represents zero or more characters	bl% finds bl, black, blue, and blob
+       _	 Represents a single character	h_t finds hot, hat, and hit
+      [] 	Represents any single character within the brackets	h[oa]t finds hot and hat, but not hit
+      ^  	Represents any character not in the brackets	h[^oa]t finds hit, but not hot and hat
+      -	  Represents a range of characters	c[a-b]t finds cat and cbt
+       
+  17) Difference between alter and Update ?
+       1	ALTER Command is used to add, delete, modify the attributes of the relations (tables) in the database.UPDATE Command is used to update existing records in a database.
+       2	ALTER Command by default initializes values of all the tuple(row) as NULL.	UPDATE Command sets specified values in the command to the tuples.
+       3	ALTER command make changes with table structure.	UPDATE command makes changes with data inside the table.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
        
        
        
