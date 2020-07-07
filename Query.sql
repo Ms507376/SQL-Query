@@ -130,6 +130,28 @@ WHERE MOD (EmpId, 2) = 0;
        2	ALTER Command by default initializes values of all the tuple(row) as NULL.	UPDATE Command sets specified values in the command to the tuples.
        3	ALTER command make changes with table structure.	UPDATE command makes changes with data inside the table.
        
+  18) Grant and revoke ?
+      GRANT : It is Used to provide any user access privileges for the database.
+          GRANT CREATE SESSION TO username;
+          GRANT CREATE TABLE TO username;
+          GRANT sysdba TO username;(All database permission is given to user).
+          
+      REVOKE: It is Used to take back permissions from any user.
+              REVOKE CREATE TABLE FROM username;
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+       
        
        
        
