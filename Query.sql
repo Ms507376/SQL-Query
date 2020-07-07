@@ -88,6 +88,71 @@ WHERE MOD (EmpId, 2) = 0;
 /* 13)To get sql developer version */
      SELECT @@VERSION
      
+  14) How to add and delete the column from existing table?
+     -----To add the column in table------------------------
+      ALTER TABLE table_name
+              ADD (Columnname_1  datatype,
+              Columnname_2  datatype,
+              …
+              Columnname_n  datatype);
+              
+    ----------To drop/delete the column from existing table---
+      ALTER TABLE table_name
+      DROP COLUMN column_name;
+      
+  15 ) How to update the value  in a table?
+       UPDATE table_name
+       SET column1 = value1, column2 = value2, ...
+       WHERE condition;
+       
+       e.g 
+       UPDATE Customers
+       SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+       WHERE CustomerID = 1;
+  
+  16)
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+   
+     
      
     
 
